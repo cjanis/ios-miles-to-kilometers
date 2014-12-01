@@ -4,7 +4,6 @@ import UIKit
 
 /*
 
-- only display necessary decimals
 - customize keyboard to close
 
 */

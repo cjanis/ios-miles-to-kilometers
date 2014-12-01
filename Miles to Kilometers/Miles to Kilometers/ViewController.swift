@@ -48,8 +48,9 @@ class ViewController: UIViewController {
         }
         
         // format numbers
-        var formattedMiles = NSString(format:"%.2f", miles)
-        var formattedKilometers = NSString(format:"%.2f", kilometers)
+        let nf = NSNumberFormatter(); nf.numberStyle = NSNumberFormatterStyle.DecimalStyle; nf.maximumFractionDigits = 2
+        var formattedMiles = nf.stringFromNumber(miles)
+        var formattedKilometers = nf.stringFromNumber(kilometers)
         
         // determine terminology
         var termMiles = "mile"
@@ -62,7 +63,7 @@ class ViewController: UIViewController {
         }
         
         // display results
-        labelMain.text = "\(formattedMiles) \(termMiles) = \(formattedKilometers) \(termKilometers)"
+        labelMain.text = "\(formattedMiles!) \(termMiles) = \(formattedKilometers!) \(termKilometers)"
         
     }
     
