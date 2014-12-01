@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>69E97DC8-947B-499F-AB33-AC5F5F610564</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Miles to Kilometers</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>5712946FB4B106EF20AA2FE9CB4C9F73728EA883</key>
+		<string>https://github.com/cjanis/ios-miles-to-kilometers.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Miles to Kilometers/Miles to Kilometers.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>5712946FB4B106EF20AA2FE9CB4C9F73728EA883</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/cjanis/ios-miles-to-kilometers.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>5712946FB4B106EF20AA2FE9CB4C9F73728EA883</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>5712946FB4B106EF20AA2FE9CB4C9F73728EA883</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ios-miles-to-kilometers</string>
+		</dict>
+	</array>
+</dict>
+</plist>
