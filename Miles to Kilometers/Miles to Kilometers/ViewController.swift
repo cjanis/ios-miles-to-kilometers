@@ -10,36 +10,59 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // setup main label
     @IBOutlet weak var labelMain: UILabel!
+
+    // setup textfield
+    @IBOutlet weak var textfieldDistance: UITextField!
+
+    // setup unit selector
+    var units = "miles"
+    @IBOutlet weak var segmentUnits: UISegmentedControl!
+    @IBAction func segmentUnits(sender: AnyObject) {
+        switch segmentUnits.selectedSegmentIndex
+        {
+            case 0:
+                units = "miles";
+            case 1:
+                units = "kilometers";
+            default:
+                break;
+        }
+    }
     
-    @IBOutlet weak var textfieldMiles: UITextField!
-    
+    // setup submit button
     @IBAction func buttonConvert(sender: AnyObject) {
-        
-        println(">> converting \(textfieldMiles.text) miles to kilometers")
-        
-        // convert miles from string to float
-        var miles = (textfieldMiles.text as NSString).floatValue
-        
-        // calculate kilometers
-        var kilometers = miles * 1.609344
+
+        // convert distance from string to float
+        var distance = (textfieldDistance.text as NSString).floatValue
+
+        // make conversion
+        var miles, kilometers: Float
+        if (units == "miles") {
+            miles = distance
+            kilometers = miles * 1.609344
+        } else {
+            kilometers = distance
+            miles = kilometers * 0.621371
+        }
         
         // format numbers
-        var finalMiles = NSString(format:"%.2f", miles)
-        var finalKilometers = NSString(format:"%.2f", kilometers)
+        var formattedMiles = NSString(format:"%.2f", miles)
+        var formattedKilometers = NSString(format:"%.2f", kilometers)
         
         // determine terminology
         var termMiles = "mile"
-        if (finalMiles != "1.00") {
+        if (formattedMiles != "1") {
             termMiles = termMiles + "s"
         }
         var termKilometers = "kilometer"
-        if (finalKilometers != "1.00") {
+        if (formattedKilometers != "1") {
             termKilometers = termKilometers + "s"
         }
         
         // display results
-        labelMain.text = "\(finalMiles) \(termMiles) = \(finalKilometers) \(termKilometers)"
+        labelMain.text = "\(formattedMiles) \(termMiles) = \(formattedKilometers) \(termKilometers)"
         
     }
     
