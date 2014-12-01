@@ -4,6 +4,6 @@ import UIKit
 
 /*
 
-- customize keyboard to close
+- allow keyboard to close
 
 */

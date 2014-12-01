@@ -22,7 +22,10 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="aAc-gP-ojc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" keyboardAppearance="light"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="light" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="textfieldOutside:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="r3T-IT-bd7"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 mile = 1.61 kilometers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aER-fZ-iTc">
                                 <rect key="frame" x="180" y="70" width="241" height="22"/>
@@ -51,9 +54,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="centerX" secondItem="aER-fZ-iTc" secondAttribute="centerX" constant="-0.5" id="5FS-Ch-7Ju"/>
                             <constraint firstItem="aER-fZ-iTc" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="BkS-G7-h62"/>
                             <constraint firstItem="me8-iK-Cja" firstAttribute="top" secondItem="aER-fZ-iTc" secondAttribute="bottom" constant="48" id="FMZ-Mj-rgf"/>
+                            <constraint firstItem="me8-iK-Cja" firstAttribute="centerX" secondItem="aER-fZ-iTc" secondAttribute="centerX" constant="-0.5" id="N3i-8r-HAZ"/>
                             <constraint firstItem="kj0-PW-z2W" firstAttribute="top" secondItem="Bd5-8l-rh4" secondAttribute="bottom" constant="40" id="QqO-G3-dDw"/>
                             <constraint firstAttribute="centerX" secondItem="aER-fZ-iTc" secondAttribute="centerX" id="UZS-Md-YV9"/>
                             <constraint firstAttribute="centerX" secondItem="me8-iK-Cja" secondAttribute="centerX" id="YMx-bT-mko"/>
@@ -71,6 +77,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="PoR-hF-bc4"/>
             </objects>
             <point key="canvasLocation" x="440" y="411"/>
         </scene>
