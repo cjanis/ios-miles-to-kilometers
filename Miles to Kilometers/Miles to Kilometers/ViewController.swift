@@ -10,33 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    // setup main label
-    @IBOutlet weak var labelMain: UILabel!
-
-    // setup textfield
-    @IBOutlet weak var textfieldDistance: UITextField!
-
-    // setup unit selector
-    var units = "miles"
-    @IBOutlet weak var segmentUnits: UISegmentedControl!
-    @IBAction func segmentUnits(sender: AnyObject) {
-        switch segmentUnits.selectedSegmentIndex
-        {
-            case 0:
-                units = "miles";
-            case 1:
-                units = "kilometers";
-            default:
-                break;
-        }
-    }
-    
-    // setup submit button
-    @IBAction func buttonConvert(sender: AnyObject) {
-
+    // convert function
+    func convert() {
+        
         // convert distance from string to float
         var distance = (textfieldDistance.text as NSString).floatValue
-
+        
         // make conversion
         var miles, kilometers: Float
         if (units == "miles") {
@@ -67,13 +46,34 @@ class ViewController: UIViewController {
         
     }
     
+    // setup main label
+    @IBOutlet weak var labelMain: UILabel!
+
+    // setup textfield
+    @IBOutlet weak var textfieldDistance: UITextField!
+    @IBAction func textfieldDistanceChange(sender: AnyObject) {
+        convert()
+    }
+
+    // setup unit selector
+    var units = "miles"
+    @IBOutlet weak var segmentUnits: UISegmentedControl!
+    @IBAction func segmentUnits(sender: AnyObject) {
+        switch segmentUnits.selectedSegmentIndex
+        {
+            case 0:
+                units = "miles";
+            case 1:
+                units = "kilometers";
+            default:
+                break;
+        }
+        convert()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
