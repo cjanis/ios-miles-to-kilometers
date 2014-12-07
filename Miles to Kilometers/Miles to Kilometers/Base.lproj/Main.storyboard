@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C68k" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C68k" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,26 +16,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="me8-iK-Cja">
-                                <rect key="frame" x="200" y="140" width="200" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="me8-iK-Cja">
+                                <rect key="frame" x="150" y="109" width="300" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="aAc-gP-ojc"/>
+                                    <constraint firstAttribute="width" constant="300" id="HhG-xm-J5q"/>
+                                    <constraint firstAttribute="height" constant="50" id="s6Y-l3-jgO"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad" keyboardAppearance="light" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="textfieldDistanceChange:" destination="vXZ-lx-hvc" eventType="editingChanged" id="WBJ-1V-sDE"/>
-                                    <action selector="textfieldOutside:" destination="vXZ-lx-hvc" eventType="touchUpOutside" id="r3T-IT-bd7"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 mile = 1.61 kilometers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aER-fZ-iTc">
-                                <rect key="frame" x="180" y="70" width="241" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="1 mi = 1.61 km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aER-fZ-iTc">
+                                <rect key="frame" x="103" y="60" width="394" height="22"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Bd5-8l-rh4">
-                                <rect key="frame" x="223" y="190" width="155" height="29"/>
+                                <rect key="frame" x="223" y="179" width="155" height="29"/>
                                 <segments>
                                     <segment title="miles"/>
                                     <segment title="kilometers"/>
@@ -45,19 +45,29 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="me8-iK-Cja" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="40" id="0t3-Wn-5Tf"/>
                             <constraint firstAttribute="centerX" secondItem="aER-fZ-iTc" secondAttribute="centerX" constant="-0.5" id="5FS-Ch-7Ju"/>
-                            <constraint firstItem="aER-fZ-iTc" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="50" id="BkS-G7-h62"/>
-                            <constraint firstItem="me8-iK-Cja" firstAttribute="top" secondItem="aER-fZ-iTc" secondAttribute="bottom" constant="48" id="FMZ-Mj-rgf"/>
+                            <constraint firstItem="me8-iK-Cja" firstAttribute="top" secondItem="aER-fZ-iTc" secondAttribute="bottom" constant="27" id="BW9-NT-FJf"/>
+                            <constraint firstAttribute="centerX" secondItem="Bd5-8l-rh4" secondAttribute="centerX" constant="-0.5" id="Hx8-1S-rDP"/>
+                            <constraint firstItem="aER-fZ-iTc" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="40" id="MFa-hw-am7"/>
                             <constraint firstItem="me8-iK-Cja" firstAttribute="centerX" secondItem="aER-fZ-iTc" secondAttribute="centerX" constant="-0.5" id="N3i-8r-HAZ"/>
+                            <constraint firstItem="Bd5-8l-rh4" firstAttribute="top" secondItem="me8-iK-Cja" secondAttribute="bottom" constant="20" id="QLd-4v-jex"/>
                             <constraint firstAttribute="centerX" secondItem="aER-fZ-iTc" secondAttribute="centerX" id="UZS-Md-YV9"/>
                             <constraint firstAttribute="centerX" secondItem="me8-iK-Cja" secondAttribute="centerX" id="YMx-bT-mko"/>
-                            <constraint firstItem="Bd5-8l-rh4" firstAttribute="top" secondItem="me8-iK-Cja" secondAttribute="bottom" constant="20" id="gP5-oY-nWL"/>
                             <constraint firstItem="me8-iK-Cja" firstAttribute="centerX" secondItem="Bd5-8l-rh4" secondAttribute="centerX" constant="-0.5" id="jrQ-lf-eRO"/>
                             <constraint firstAttribute="centerX" secondItem="me8-iK-Cja" secondAttribute="centerX" constant="-0.5" id="nRY-CQ-jxQ"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0t3-Wn-5Tf"/>
+                                <exclude reference="N3i-8r-HAZ"/>
+                                <exclude reference="jrQ-lf-eRO"/>
+                                <exclude reference="nRY-CQ-jxQ"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="labelMain" destination="aER-fZ-iTc" id="z8G-h4-kB5"/>

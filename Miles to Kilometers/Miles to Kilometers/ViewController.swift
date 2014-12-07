@@ -32,13 +32,13 @@ class ViewController: UIViewController {
         var formattedKilometers = nf.stringFromNumber(kilometers)
         
         // determine terminology
-        var termMiles = "mile"
+        var termMiles = "mi"
         if (formattedMiles != "1") {
-            termMiles = termMiles + "s"
+            termMiles = termMiles + ""
         }
-        var termKilometers = "kilometer"
+        var termKilometers = "km"
         if (formattedKilometers != "1") {
-            termKilometers = termKilometers + "s"
+            termKilometers = termKilometers + ""
         }
         
         // display results
@@ -53,6 +53,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var textfieldDistance: UITextField!
     @IBAction func textfieldDistanceChange(sender: AnyObject) {
         convert()
+    }
+    // dismiss keyboard
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        self.view.endEditing(true)
     }
 
     // setup unit selector
@@ -70,6 +74,7 @@ class ViewController: UIViewController {
         }
         convert()
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
