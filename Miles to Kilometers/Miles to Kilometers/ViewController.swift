@@ -23,7 +23,7 @@ class ViewController: UIViewController {
             kilometers = miles * 1.609344
         } else {
             kilometers = distance
-            miles = kilometers * 0.621371
+            miles = kilometers * 0.621371192
         }
         
         // format numbers
@@ -54,8 +54,18 @@ class ViewController: UIViewController {
     @IBAction func textfieldDistanceChange(sender: AnyObject) {
         convert()
     }
+    // reset textfield content
+    func resetTextfieldDistance() {
+        var distance = (textfieldDistance.text as NSString).floatValue
+        if (distance > 0) {
+        } else {
+            textfieldDistance.text = "0"
+        }
+        convert()
+    }
     // dismiss keyboard
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        resetTextfieldDistance()
         self.view.endEditing(true)
     }
 
