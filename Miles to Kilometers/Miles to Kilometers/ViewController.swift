@@ -27,7 +27,7 @@ class ViewController: UIViewController {
         }
         
         // format numbers
-        let nf = NSNumberFormatter(); nf.numberStyle = NSNumberFormatterStyle.DecimalStyle; nf.maximumFractionDigits = 2
+        let nf = NSNumberFormatter(); nf.numberStyle = NSNumberFormatterStyle.DecimalStyle; nf.maximumFractionDigits = 9
         var formattedMiles = nf.stringFromNumber(miles)
         var formattedKilometers = nf.stringFromNumber(kilometers)
         
@@ -58,6 +58,11 @@ class ViewController: UIViewController {
     func resetTextfieldDistance() {
         var distance = (textfieldDistance.text as NSString).floatValue
         if (distance > 0) {
+            // format numbers
+            let nf = NSNumberFormatter(); nf.numberStyle = NSNumberFormatterStyle.NoStyle; nf.maximumFractionDigits = 9
+            var formattedDistance = nf.stringFromNumber(distance)
+            // reset content
+            textfieldDistance.text = formattedDistance
         } else {
             textfieldDistance.text = "0"
         }
